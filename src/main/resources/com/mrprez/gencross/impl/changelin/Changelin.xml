@@ -1,0 +1,2092 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personnage name="Changelin" version="1.4" gencrossVersion="1.10" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="http://mrprez.dyndns.org:8080/gencross-web/gencross-plugin.xsd">
+	<phase name="Seeming"/>
+	<phaseList>
+		<phase name="Seeming"/>
+		<phase name="Création"/>
+		<phase name="En vie"/>
+	</phaseList>
+	<pointPools>
+		<pool name="Attributs Majeur" remaining="5" total="5"/>
+		<pool name="Talents Majeur" remaining="11" total="11"/>
+		<pool name="Attributs Intermediaire" remaining="4" total="4"/>
+		<pool name="Talents Intermediaire" remaining="7" total="7"/>
+		<pool name="Attributs Mineur" remaining="3" total="3"/>
+		<pool name="Talents Mineur" remaining="4" total="4"/>
+		<pool name="Spécialités" remaining="4" total="4"/>
+		<pool name="Avantages" remaining="7" total="7"/>
+		<pool name="Contrats" remaining="5" total="5"/>
+		<pool name="Expérience" remaining="0" total="0"/>
+	</pointPools>
+	<properties>
+		<property editable="true" name="Nom">
+			<Value class="com.mrprez.gencross.value.StringValue"></Value>
+		</property>
+		<property editable="true" name="Age">
+			<Value class="com.mrprez.gencross.value.StringValue">20</Value>
+		</property>
+		<property editable="true" name="Vertu">
+			<Value class="com.mrprez.gencross.value.StringValue"></Value>
+			<valueChoice>
+				<Value class="com.mrprez.gencross.value.StringValue">Charité</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Espérance</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Foi</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Justice</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Persévérance</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Prudence</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Tempérance</Value>
+			</valueChoice>
+		</property>
+		<property editable="true" name="Vice">
+			<Value class="com.mrprez.gencross.value.StringValue"></Value>
+			<valueChoice>
+				<Value class="com.mrprez.gencross.value.StringValue">Avarice</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Colère</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Envie</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Gourmandise</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Luxure</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Orgueil</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Paresse</Value>
+			</valueChoice>
+		</property>
+		<property editable="true" name="Seeming">
+			<Value class="com.mrprez.gencross.value.StringValue"></Value>
+			<valueChoice>
+				<Value class="com.mrprez.gencross.value.StringValue">Beast</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Darkling</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Elemental</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Fairest</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Ogre</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Wizened</Value>
+			</valueChoice>
+		</property>
+		<property editable="true" name="Kith">
+			<Value class="com.mrprez.gencross.value.StringValue"></Value>
+			<valueChoice>
+			</valueChoice>
+		</property>
+		<property editable="false" name="Attributs">
+			<propertiesList fixe="true" open="false">
+				<properties>
+					<property editable="true" name="Mental">
+						<Value class="com.mrprez.gencross.value.StringValue">Intermediaire</Value>
+						<valueChoice>
+							<Value class="com.mrprez.gencross.value.StringValue">Mineur</Value>
+							<Value class="com.mrprez.gencross.value.StringValue">Intermediaire</Value>
+							<Value class="com.mrprez.gencross.value.StringValue">Majeur</Value>
+						</valueChoice>
+						<propertiesList fixe="true" open="false">
+							<properties>
+								<property editable="true" name="Intelligence">
+									<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Attributs Intermediaire</pointPool>
+											<args>
+												<arg key="0">-1</arg>
+												<arg key="1">0</arg>
+												<arg key="2">1</arg>
+												<arg key="3">2</arg>
+												<arg key="4">3</arg>
+												<arg key="5">5</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Astuce">
+									<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Attributs Intermediaire</pointPool>
+											<args>
+												<arg key="0">-1</arg>
+												<arg key="1">0</arg>
+												<arg key="2">1</arg>
+												<arg key="3">2</arg>
+												<arg key="4">3</arg>
+												<arg key="5">5</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Résolution">
+									<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Attributs Intermediaire</pointPool>
+											<args>
+												<arg key="0">-1</arg>
+												<arg key="1">0</arg>
+												<arg key="2">1</arg>
+												<arg key="3">2</arg>
+												<arg key="4">3</arg>
+												<arg key="5">5</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+							</properties>
+						</propertiesList>
+					</property>
+					<property editable="true" name="Physique">
+						<Value class="com.mrprez.gencross.value.StringValue">Intermediaire</Value>
+						<valueChoice>
+							<Value class="com.mrprez.gencross.value.StringValue">Mineur</Value>
+							<Value class="com.mrprez.gencross.value.StringValue">Intermediaire</Value>
+							<Value class="com.mrprez.gencross.value.StringValue">Majeur</Value>
+						</valueChoice>
+						<propertiesList fixe="true" open="false">
+							<properties>
+								<property editable="true" name="Force">
+									<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Attributs Intermediaire</pointPool>
+											<args>
+												<arg key="0">-1</arg>
+												<arg key="1">0</arg>
+												<arg key="2">1</arg>
+												<arg key="3">2</arg>
+												<arg key="4">3</arg>
+												<arg key="5">5</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Agilité">
+									<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Attributs Intermediaire</pointPool>
+											<args>
+												<arg key="0">-1</arg>
+												<arg key="1">0</arg>
+												<arg key="2">1</arg>
+												<arg key="3">2</arg>
+												<arg key="4">3</arg>
+												<arg key="5">5</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Vigueur">
+									<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Attributs Intermediaire</pointPool>
+											<args>
+												<arg key="0">-1</arg>
+												<arg key="1">0</arg>
+												<arg key="2">1</arg>
+												<arg key="3">2</arg>
+												<arg key="4">3</arg>
+												<arg key="5">5</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+							</properties>
+						</propertiesList>
+					</property>
+					<property editable="true" name="Social">
+						<Value class="com.mrprez.gencross.value.StringValue">Intermediaire</Value>
+						<valueChoice>
+							<Value class="com.mrprez.gencross.value.StringValue">Mineur</Value>
+							<Value class="com.mrprez.gencross.value.StringValue">Intermediaire</Value>
+							<Value class="com.mrprez.gencross.value.StringValue">Majeur</Value>
+						</valueChoice>
+						<propertiesList fixe="true" open="false">
+							<properties>
+								<property editable="true" name="Présence">
+									<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Attributs Intermediaire</pointPool>
+											<args>
+												<arg key="0">-1</arg>
+												<arg key="1">0</arg>
+												<arg key="2">1</arg>
+												<arg key="3">2</arg>
+												<arg key="4">3</arg>
+												<arg key="5">5</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Manipulation">
+									<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Attributs Intermediaire</pointPool>
+											<args>
+												<arg key="0">-1</arg>
+												<arg key="1">0</arg>
+												<arg key="2">1</arg>
+												<arg key="3">2</arg>
+												<arg key="4">3</arg>
+												<arg key="5">5</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Calme">
+									<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Attributs Intermediaire</pointPool>
+											<args>
+												<arg key="0">-1</arg>
+												<arg key="1">0</arg>
+												<arg key="2">1</arg>
+												<arg key="3">2</arg>
+												<arg key="4">3</arg>
+												<arg key="5">5</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+							</properties>
+						</propertiesList>
+					</property>
+				</properties>
+			</propertiesList>
+		</property>
+		<property editable="false" name="Talents">
+			<propertiesList fixe="true" open="false">
+				<properties>
+					<property editable="true" name="Mental">
+						<Value class="com.mrprez.gencross.value.StringValue">Intermediaire</Value>
+						<valueChoice>
+							<Value class="com.mrprez.gencross.value.StringValue">Mineur</Value>
+							<Value class="com.mrprez.gencross.value.StringValue">Intermediaire</Value>
+							<Value class="com.mrprez.gencross.value.StringValue">Majeur</Value>
+						</valueChoice>
+						<propertiesList fixe="true" open="false">
+							<properties>
+								<property editable="true" name="Artisanat">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Erudition">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Informatique">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Investigation">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Médecine">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Occult">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Politique">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Science">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+							</properties>
+						</propertiesList>
+					</property>
+					<property editable="true" name="Physique">
+						<Value class="com.mrprez.gencross.value.StringValue">Intermediaire</Value>
+						<valueChoice>
+							<Value class="com.mrprez.gencross.value.StringValue">Mineur</Value>
+							<Value class="com.mrprez.gencross.value.StringValue">Intermediaire</Value>
+							<Value class="com.mrprez.gencross.value.StringValue">Majeur</Value>
+						</valueChoice>
+						<propertiesList fixe="true" open="false">
+							<properties>
+								<property editable="true" name="Mélée">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Armes à feu">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Athlétisme">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Bagarre">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Conduite">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Furtivité">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Larcin">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Survie">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+							</properties>
+						</propertiesList>
+					</property>
+					<property editable="true" name="Social">
+						<Value class="com.mrprez.gencross.value.StringValue">Intermediaire</Value>
+						<valueChoice>
+							<Value class="com.mrprez.gencross.value.StringValue">Mineur</Value>
+							<Value class="com.mrprez.gencross.value.StringValue">Intermediaire</Value>
+							<Value class="com.mrprez.gencross.value.StringValue">Majeur</Value>
+						</valueChoice>
+						<propertiesList fixe="true" open="false">
+							<properties>
+								<property editable="true" name="Animaux">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Empathie">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Expression">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Intimidation">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Persuasion">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Relationnel">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Exp de la rue">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+								<property editable="true" name="Subterfuge">
+									<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+									<propertiesList fixe="false" open="true">
+										<properties></properties>
+										<defaultProperty>
+											<property editable="false" name="">
+												
+													<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+														
+														<pointPool>Spécialités</pointPool>
+														<args>
+															<arg key="cost">1</arg>
+														</args>
+													</historyFactory>
+												
+											</property>
+										</defaultProperty>
+									</propertiesList>
+									
+										<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+											
+											<pointPool>Talents Intermediaire</pointPool>
+											<args>
+												<arg key="0">0</arg>
+												<arg key="1">1</arg>
+												<arg key="2">2</arg>
+												<arg key="3">3</arg>
+												<arg key="4">4</arg>
+												<arg key="5">6</arg>
+											</args>
+										</historyFactory>
+									
+								</property>
+							</properties>
+						</propertiesList>
+					</property>
+				</properties>
+			</propertiesList>
+		</property>
+		<property editable="false" name="Avantages">
+			<propertiesList fixe="false" open="true">
+				<propertyChoice>
+					<property editable="false" name="Bon sens">
+						<Value class="com.mrprez.gencross.value.IntValue">4</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Esprit méditatif">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Langue étrangère" specification="">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Médecine naturelle">
+						<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Mémoire éidétique">
+						<Value class="com.mrprez.gencross.value.IntValue">2</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Science infuse">
+						<Value class="com.mrprez.gencross.value.IntValue">4</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Sixième sens">
+						<Value class="com.mrprez.gencross.value.IntValue">2</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Ambidextre">
+						<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Capacité pulmonaire">
+						<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Cascadeur">
+						<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Désarmer">
+						<Value class="com.mrprez.gencross.value.IntValue">2</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Dos musclé">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Esquive (armes blanches)">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Esquive (mains nues)">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Estomac en béton">
+						<Value class="com.mrprez.gencross.value.IntValue">2</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Flingueur">
+						<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Géant">
+						<Value class="com.mrprez.gencross.value.IntValue">4</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Guérison rapide">
+						<Value class="com.mrprez.gencross.value.IntValue">4</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Immunité innée">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Réflexes rapides">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">2</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Résistance aux toxines">
+						<Value class="com.mrprez.gencross.value.IntValue">2</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Santé de fer">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Sens de l’orientation">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Sprinteur">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Style de combat : boxe">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Style de combat : Kung-fu">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Style de combat : deux armes blanches">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">4</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Techniques de combat" specification="">
+						<Value class="com.mrprez.gencross.value.IntValue">2</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Tir rapide">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Tour de chauffe">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Alliés" specification="">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Beauté fatale">
+						<Value class="com.mrprez.gencross.value.IntValue">2</Value>
+						<valueChoice>
+							<Value class="com.mrprez.gencross.value.IntValue">2</Value>
+							<Value class="com.mrprez.gencross.value.IntValue">4</Value>
+						</valueChoice>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Contacts" specification="">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Inspiration">
+						<Value class="com.mrprez.gencross.value.IntValue">4</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Mentor" specification="">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Pilier de bar">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Renommée">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Ressources">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Serviteurs" specification="">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Statut" specification="">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Court (Printemps)">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Court (Eté)">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Court (Automne)">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Court (Hiver)">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Complaisances de court (Printemps)">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Complaisances de court (Eté)">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Complaisances de court (Automne)">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Complaisances de court (Hiver)">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Nouvelle identité">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Refuge">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Source">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+				</propertyChoice>
+				<properties></properties>
+				<defaultProperty>
+					<property editable="true" name="???">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+						
+							<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+								
+								<pointPool>Avantages</pointPool>
+								<args>
+									<arg key="0">0</arg>
+									<arg key="1">1</arg>
+									<arg key="2">2</arg>
+									<arg key="3">3</arg>
+									<arg key="4">4</arg>
+									<arg key="5">6</arg>
+								</args>
+							</historyFactory>
+						
+					</property>
+				</defaultProperty>
+			</propertiesList>
+			
+				<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+					
+					<pointPool>Avantages</pointPool>
+					<args>
+						<arg key="0">0</arg>
+						<arg key="1">1</arg>
+						<arg key="2">2</arg>
+						<arg key="3">3</arg>
+						<arg key="4">4</arg>
+						<arg key="5">6</arg>
+					</args>
+				</historyFactory>
+			
+		</property>
+		<property editable="false" name="Desavantages">
+			<propertiesList fixe="false" open="true">
+				<properties></properties>
+				<defaultProperty>
+					<property editable="false" name="???"></property>
+				</defaultProperty>
+			</propertiesList>
+		</property>
+		<property editable="true" name="Wyrd">
+			<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+			<min>
+				<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+			</min>
+			<max>
+				<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+			</max>
+			<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+			
+				<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+					
+					<pointPool>Avantages</pointPool>
+					<args>
+						<arg key="factor">3</arg>
+					</args>
+				</historyFactory>
+			
+		</property>
+		<property editable="false" name="Reserve de Glamour">
+			<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+		</property>
+		<property editable="false" name="Glamour par tour">
+			<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+		</property>
+		<property editable="false" name="Contrats">
+			<propertiesList fixe="true" open="false">
+				<propertyChoice>
+					<property editable="true" name="Artifice">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Mirroir">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Rêves">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Foyer">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Brumes">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Ombres">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Pierre">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Vaine Gloire">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Eléments" specification="">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Griffes et Crocs" specification="">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Printemps fugace">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Printemps éternel">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Eté fugace">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Eté éternel">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Automne fugace">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Automne éternel">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Hiver fugace">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="true" name="Hiver éternel">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Gobelin I - Destiné contre chance">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Gobelin I - Marché du tireur">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Gobelin II - Folie de l'oracle">
+						<Value class="com.mrprez.gencross.value.IntValue">2</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Gobelin II - Juste passage">
+						<Value class="com.mrprez.gencross.value.IntValue">2</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Gobelin II - Or des fous">
+						<Value class="com.mrprez.gencross.value.IntValue">2</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Gobelin III - Fardeau de la vie">
+						<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Gobelin III - Danger différé">
+						<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Gobelin IV - Bonne et mauvaise chance">
+						<Value class="com.mrprez.gencross.value.IntValue">4</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Gobelin IV - Appel de la chasse">
+						<Value class="com.mrprez.gencross.value.IntValue">4</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+					<property editable="false" name="Gobelin V - Trouvé et perdu">
+						<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+					</property>
+				</propertyChoice>
+				<properties></properties>
+			</propertiesList>
+			<historyFactory class="com.mrprez.gencross.history.TabHistoryFactory">
+				<pointPool>Contrats</pointPool>
+				<args>
+					<arg key="0">0</arg>
+					<arg key="1">1</arg>
+					<arg key="2">2</arg>
+					<arg key="3">3</arg>
+					<arg key="4">4</arg>
+					<arg key="5">6</arg>
+				</args>
+			</historyFactory>
+		</property>
+		<property editable="false" name="Taille">
+			<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+		</property>
+		<property editable="false" name="Vitesse">
+			<Value class="com.mrprez.gencross.value.IntValue">7</Value>
+		</property>
+		<property editable="false" name="Initiative">
+			<Value class="com.mrprez.gencross.value.IntValue">2</Value>
+		</property>
+		<property editable="false" name="Défense">
+			<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+		</property>
+		<property editable="false" name="Santé">
+			<Value class="com.mrprez.gencross.value.IntValue">6</Value>
+			<max>
+				<Value class="com.mrprez.gencross.value.IntValue">16</Value>
+			</max>
+			<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+		</property>
+		<property editable="false" name="Volonté">
+			<Value class="com.mrprez.gencross.value.IntValue">2</Value>
+			<max>
+				<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+			</max>
+			<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+		</property>
+		<property editable="false" name="Clareté">
+			<Value class="com.mrprez.gencross.value.IntValue">7</Value>
+			<max>
+				<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+			</max>
+			<renderer class="com.mrprez.gencross.impl.changelin.MdTRenderer"/>
+		</property>
+		<property editable="false" name="Serment">
+			<propertiesList fixe="false" open="true">
+				<properties></properties>
+				<defaultProperty>
+					<property editable="false" name=""></property>
+				</defaultProperty>
+			</propertiesList>
+		</property>
+	</properties>
+	<beforeChangeValueListeners></beforeChangeValueListeners>
+	<afterChangeValueListeners>
+		<listener class="com.mrprez.gencross.listener.custom.CustomAfterChangeValueListener">
+			<pattern>Attributs#[^#]*</pattern>
+			<arg name="method">changeAttributGroupValue</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.custom.CustomAfterChangeValueListener">
+			<pattern>Talents#[^#]*</pattern>
+			<arg name="method">changeTalentGroupValue</arg>
+		</listener>
+	</afterChangeValueListeners>
+	<beforeAddPropertyListeners>
+		<listener class="com.mrprez.gencross.listener.custom.CustomBeforeAddPropertyListener">
+			<pattern>Avantages#[^#]*</pattern>
+			<arg name="method">addAvantage</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.custom.CustomBeforeAddPropertyListener">
+			<pattern>Avantages#Court ([^#]*)</pattern>
+			<arg name="method">addCourt</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.custom.CustomBeforeAddPropertyListener">
+			<pattern>Avantages#Complaisances de court ([^#]*)</pattern>
+			<arg name="method">addComplaisances</arg>
+		</listener>
+	</beforeAddPropertyListeners>
+	<afterAddPropertyListeners></afterAddPropertyListeners>
+	<beforeDeletePropertyListeners></beforeDeletePropertyListeners>
+	<afterDeletePropertyListeners></afterDeletePropertyListeners>
+	<passToNextPhaseListeners></passToNextPhaseListeners>
+	<formulas>
+		<formula>Initiative=#Attributs#Physique#Agilité# + #Attributs#Social#Calme# + #Avantages#Réflexes rapides#
+		</formula>
+		<formula>Taille=5 + #Avantages#Géant# / 4</formula>
+		<formula>Vitesse=5 + #Attributs#Physique#Agilité# + #Attributs#Physique#Force# + #Avantages#Sprinteur#
+		</formula>
+		<formula>Santé=#Taille# + #Attributs#Physique#Vigueur#</formula>
+		<formula>Volonté=#Attributs#Mental#Résolution# + #Attributs#Social#Calme#
+		</formula>
+		<formula>Défense=#Attributs#Mental#Astuce# min #Attributs#Physique#Agilité#
+		</formula>
+		<formula>Reserve de Glamour=#Wyrd# + 9</formula>
+		<formula>Glamour par tour=#Wyrd#</formula>
+	</formulas>
+	<history></history>
+</personnage>
