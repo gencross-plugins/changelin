@@ -10,16 +10,31 @@
 	<name>Changelin</name>
 	
 	<parent>
-		<artifactId>gencross-plugins</artifactId>
+		<artifactId>plugins-parent</artifactId>
 		<groupId>com.mrprez.gencross.plugins</groupId>
-		<version>1.3</version>
+		<version>1.7-SNAPSHOT</version>
 	</parent>
 	
 	<scm>
-		<connection>scm:git:git://github.com/gencross-plugins/changelin.git</connection>
-		<developerConnection>scm:git:git@github.com:gencross-plugins/changelin.git</developerConnection>
+		<connection>scm:git:git://github.com/mrprez/changelin.git</connection>
+		<developerConnection>scm:git:git@github.com:mrprez/changelin.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub mrprez Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/mrprez/changelin</url>
+		</repository>
+	</distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/mrprez/*</url>
+		</repository>
+	</repositories>
 	
 	
 	
